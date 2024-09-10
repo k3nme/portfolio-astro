@@ -9,7 +9,7 @@ import SkillLayout from '../components/SkillLayout.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
 
 import { Image } from 'astro:assets'
-import astro from '../assets/dp.jpeg'
+import dp from '../assets/dp.jpeg'
 import { getAllPosts, sortMDByDate } from '@/utils'
 
 const languages = ['Java', 'JavaScript', 'TypeScript', 'Python', 'Go (Learning)', 'Rust (Learning)']
@@ -28,8 +28,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
 			<Image
-				src={astro}
-				alt='profile photo'
+				src={dp}
+				alt='Kalyan Kaushik Khasibhatla'
 				class='h-28 w-auto rounded-full drop-shadow p-2'
 				loading='eager'
 			/>
@@ -39,18 +39,34 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
 					<Label title='Full Stack Developer' />
 					<Label title='Hyderabad'/>
-					<Label
-						title='LinkedIn'
-						as='a'
-						href='https://www.linkedin.com/in/k3nme/'
-						target='_blank'
-					/>
-					<Label
-						title='GitHub'
-						as='a'
-						href='https://github.com/k3nme'
-						target='_blank'
-					/>
+				</div>
+				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
+   	            <Label
+					title='LinkedIn'
+					as='a'
+					href='https://www.linkedin.com/in/k3nme/'
+					target='_blank'
+				/>
+				<Label
+					title='GitHub'
+					as='a'
+					href='https://github.com/k3nme'
+					target='_blank'
+				/>
+				<Label
+                        title='Twitter'
+                        as='a'
+                        href='https://twitter.com/k3nme'
+                        target='_blank'/>
+                    <Label
+                        title='Email'
+                        as='a'
+                        href='mailto:k3nwork@proton.me' />
+                    <Label
+                        title='Resume'
+                        as='a'
+                        href='/resume.pdf'
+                        target='_blank'/>
 				</div>
 			</div>
 		</section>
