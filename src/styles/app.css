@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Roboto Mono';
-    src: url('/fonts/RobotoMono.ttf');
+    font-family: 'Inter';
+    src: url('/fonts/Inter.ttf');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto Mono';
-    src: url('/fonts/RobotoMono-Italic.ttf');
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Italic.ttf');
     font-style: italic;
     font-display: swap;
 }

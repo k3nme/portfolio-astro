@@ -61,7 +61,8 @@ const config = {
       fontFamily: {
         sans: [...fontFamily.sans],
         jb: ['JetBrains Mono', 'sans'],
-        rm: ['Roboto Mono', 'monospace']
+        rm: ['Roboto Mono', 'monospace'],
+        inter: ['Inter', 'sans-serif']
       }
     }
   }
