@@ -37,10 +37,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<div class='flex flex-col items-center gap-y-4'>
 				<h1 class='md:text-3xl text-sm font-bold'>Kalyan Kaushik Khasibhatla</h1>
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-					<Label title='< Full Stack Developer />' />
+					<Label title='<Full Stack Developer/>' />
 					<Label title='@ Hyderabad'/>
 				</div>
-				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3 italic'>
+				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3 italic underline'>
    	            <Label
 					title='#LinkedIn'
 					as='a'
@@ -71,16 +71,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
                 Full Stack Developer with a passion for building products that solve real-world problems. I have experience in building web applications using modern technologies like React, Angular, Java, Node.js, and MongoDB. I am always eager to learn new technologies and improve my skills.
 			</p>
 			<p class='text-muted-foreground font-bold italic'>
-			    <b>Top Skills :</b> Java, Typescript, React, Angular, Python and Node.js
+			    <b>Top Skills -</b> Java, Typescript, React, Angular, Python, Node.js
             </p>
             <p class='text-muted-foreground font-bold italic'>
-                <b>Learning :</b> Rust, Go, Docker, Kubernetes
+                <b>Learning -</b> Rust, Go, Docker, Kubernetes
             </p>
 		</Section>
 		{
 			allPostsByDate.length > 0 && (
 				<Section title='Posts'>
-					<ul class='flex flex-col gap-y-2 italic'>
+					<ul class='flex flex-col gap-y-2'>
 						{allPostsByDate.map((p) => (
 							<li class='flex flex-col gap-x-2 sm:flex-row'>
 								<PostPreview post={p} />
