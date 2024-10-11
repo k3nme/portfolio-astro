@@ -64,6 +64,7 @@ const config = {
         rm: ['Roboto Mono', 'monospace'],
         cm: ['Cascadia Mono', 'monospace'],
         pts: ['PT Serif', 'monospace'],
+        mono: ['ui-monospace', 'monospace'],
         inter: ['Inter', 'sans-serif']
       }
     }
