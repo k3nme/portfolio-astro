@@ -1,5 +1,6 @@
 ---
 import { cn } from '@/utils'
+import Button from './Button.astro'
 
 const {
 	as: Tag = 'a',
@@ -16,14 +17,18 @@ const {
 	class={cn(
 		className,
 		'flex flex-col gap-y-3 rounded-2xl border border-border bg-primary-foreground ',
-		href && 'transition-all hover:border-foreground/25 hover:shadow-sm'
+		href && 'transition-all hover:border-foreground/25'
 	)}
 	href={href}
 >
 	<div class='flex flex-col gap-y-0.5 px-5 py-4'>
-		<h1 class='text-lg font-medium'>{heading}</h1>
+		<h1 class='text-base font-medium'>{heading}</h1>
 		<h2 class='text-muted-foreground'>{subheading}</h2>
-		<h3 class='text-muted-foreground my-2 italic'>Stack - [{techStack}]</h3>
+		<h3 class='text-muted-foreground my-2'>
+			{techStack.split(',').map((tech: string) => (
+					<Button as='button' title={tech} class="p-2"/>
+			))}
+		</h3>
 	</div>
 
 	<slot />

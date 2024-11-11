@@ -25,22 +25,21 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
 <PageLayout meta={{ title: 'Kalyan Kaushik Khasibhatla' }}>
-	<div class='flex w-full flex-col gap-y-10 drop-shadow text-shadow'>
+	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
 			<Image
 				src={dp}
 				alt='Kalyan Kaushik Khasibhatla'
-				class='h-28 w-auto rounded-full drop-shadow p-2'
-				loading='eager'
+				class='h-48 w-auto rounded-xl p-2'
+				loading='lazy'
 			/>
 
 			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='md:text-3xl text-sm font-bold'>Kalyan Kaushik Khasibhatla</h1>
-				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-					<Label title='<Full Stack Developer/>' />
-					<Label title='Hyderabad'/>
+				<div class='flex flex-wrap flex-col justify-center gap-x-7 gap-y-3'>
+					<Label title='Full Stack Developer' class="font-medium" />
+					<Label title='Hyderabad, India' class="font-medium text-muted-foreground" />
 				</div>
-				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3 italic underline underline-offset-4'>
+				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3 underline underline-offset-4 text-muted-foreground'>
    	            <Label
 					title='LinkedIn'
 					as='a'
@@ -53,11 +52,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					href='https://github.com/k3nme'
 					target='_blank'
 				/>
-				<Label
-                        title='Twitter'
-                        as='a'
-                        href='https://twitter.com/learnk3n'
-                        target='_blank'/>
                     <Label
                         title='Mail'
                         as='a'
@@ -70,12 +64,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<p class='text-muted-foreground'>
                 Full Stack Developer with a passion for building products that solve real-world problems. I have experience in building web applications using modern technologies like React, Angular, Java, Node.js, and MongoDB. I am always eager to learn new technologies and improve my skills.
 			</p>
-			<p class='text-muted-foreground font-bold italic'>
-			    <b>Top Skills -</b> Java, Typescript, React, Angular, Python, Node.js
-            </p>
-            <p class='text-muted-foreground font-bold italic'>
-                <b>Learning -</b> Rust, Go, Docker, Kubernetes
-            </p>
 		</Section>
 		{
 			allPostsByDate.length > 0 && (
@@ -95,6 +83,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<Card
 				heading='Senior Software Engineer'
 				subheading='Planon, Hyderabad'
+				isCurrentPosition
 				date='Sep 2018 - Present'
 				altText='Senior Software Engineer, Planon, Hyderabad'
 				technologies="Java, Apache Wicket, OSGI, NodeJS, Angular"
@@ -155,13 +144,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					heading='Portfolio Website'
 					subheading='A personal website built using Astro, TailwindCSS'
 					techStack='Astro, TailwindCSS'
-					class='w-full'
-				/>
-				<ProjectCardWithoutImage
-				    href="#"
-					heading='Self Management System (In Progress)'
-					subheading='A cross-platform application to manage tasks, notes, and reminders, finances.'
-					techStack='TBD'
 					class='w-full'
 				/>
 			</div>

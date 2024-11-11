@@ -46,7 +46,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 	!!data.tags?.length && (
 		<div class='mt-3 flex flex-row items-center gap-x-1 flex-wrap'>
 
-			{data.tags.map((tag, i) => (
+			{data.tags.map((tag, _) => (
 				<div>
 					<a
 						aria-label={`View more blogs with the tag ${tag}`}
